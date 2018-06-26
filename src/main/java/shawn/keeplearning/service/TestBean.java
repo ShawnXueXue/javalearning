@@ -11,6 +11,6 @@ import org.springframework.stereotype.Component;
 public class TestBean {
 
 	public TestBean() {
-		System.out.println("TestBean constructed!");
+		System.out.println("TestBean Constructed!");
 	}
 }
