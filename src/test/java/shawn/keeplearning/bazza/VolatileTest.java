@@ -5,6 +5,15 @@ package shawn.keeplearning.bazza;
  * Author: Shawn
  * Contact me: shawnglhf@gmail.com
  */
+
+/**
+ * - volatile语义
+ * 1) 可以保证可见性和有序性
+ * 2)
+ * - 可以使用volatile的场景:
+ * 1）对变量的写操作不依赖于当前值
+ * 2）该变量没有包含在具有其他变量的不变式中
+ */
 public class VolatileTest {
 
 	public volatile int inc = 0;
