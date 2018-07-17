@@ -2,6 +2,7 @@ package shawn.keeplearning.bazza;
 
 import org.junit.Test;
 
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
 
 /**
@@ -19,5 +20,10 @@ public class AtomicReferenceTest {
 		System.out.println(aStr.getAndSet("new"));
 		System.out.println(aStr.compareAndSet("new", "new1"));
 		System.out.println(aStr);
+	}
+	@Test
+	public void t2() {
+		AtomicInteger ai = new AtomicInteger(0);
+		ai.incrementAndGet();
 	}
 }
