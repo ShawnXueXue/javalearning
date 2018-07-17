@@ -9,7 +9,7 @@ package shawn.keeplearning.bazza;
 /**
  * - volatile语义
  * 1) 可以保证可见性和有序性
- * 2)
+ * 2) 对一个volatile域的写，happens-before于任意后续对这个volatile域的读
  * - 可以使用volatile的场景:
  * 1）对变量的写操作不依赖于当前值
  * 2）该变量没有包含在具有其他变量的不变式中
