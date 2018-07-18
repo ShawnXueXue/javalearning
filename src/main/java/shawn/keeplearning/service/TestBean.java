@@ -13,4 +13,8 @@ public class TestBean {
 	public TestBean() {
 		System.out.println("TestBean Constructed!");
 	}
+
+	public String test1() {
+		return "This is test1";
+	}
 }
