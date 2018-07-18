@@ -8,7 +8,7 @@ import org.springframework.context.ApplicationEvent;
  * Contact me: shawnglhf@gmail.com
  */
 public class ContentEvent extends ApplicationEvent {
-	public ContentEvent(final String content) {
+	public ContentEvent(String content) {
 		super(content);
 	}
 }

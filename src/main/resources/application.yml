@@ -1,0 +1,7 @@
+management:
+    security:
+        enabled: false #是否启用安全
+    context-path: /monitor #actuator的访问路径
+endpoints:
+    shutdown:
+        enabled: true #开启shutdown端点
