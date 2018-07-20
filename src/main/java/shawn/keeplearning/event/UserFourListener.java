@@ -2,7 +2,6 @@ package shawn.keeplearning.event;
 
 import org.springframework.context.ApplicationEvent;
 import org.springframework.context.event.SmartApplicationListener;
-import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 
 /**
@@ -10,7 +9,7 @@ import org.springframework.stereotype.Component;
  * Author: Shawn
  * Contact me: shawnglhf@gmail.com
  */
-@Async
+//@Async
 @Component
 public class UserFourListener implements SmartApplicationListener {
 	@Override
@@ -20,13 +19,15 @@ public class UserFourListener implements SmartApplicationListener {
 
 	@Override
 	public boolean supportsSourceType(Class<?> aClass) {
+
 		return aClass == String.class;
 	}
 
+
 	@Override
 	public void onApplicationEvent(ApplicationEvent applicationEvent) {
-		System.out.println("[UserFourListener]msg;" + applicationEvent.getSource());
-		System.out.println("[UserFourListener]Curt thread:" + Thread.currentThread().getName());
+		System.out.println("[User4Listener]msg;" + applicationEvent.getSource());
+		System.out.println("[User4Listener]Curt thread:" + Thread.currentThread().getName());
 	}
 
 	@Override

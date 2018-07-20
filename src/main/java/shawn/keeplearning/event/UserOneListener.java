@@ -16,13 +16,13 @@ public class UserOneListener implements ApplicationListener<ApplicationEvent> {
 	@Override
 	public void onApplicationEvent(ApplicationEvent applicationEvent) {
 		if (applicationEvent instanceof ContentEvent) {
-			System.out.println("[UserOneListener]msg;" + applicationEvent.getSource());
+			System.out.println("[User1Listener]msg;" + applicationEvent.getSource());
 			try {
-				Thread.sleep(4000);
+				Thread.sleep(2000);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-			System.out.println("[UserOneListener]Curt thread:" + Thread.currentThread().getName());
+			System.out.println("[User1Listener]Curt thread:" + Thread.currentThread().getName());
 		}
 	}
 }

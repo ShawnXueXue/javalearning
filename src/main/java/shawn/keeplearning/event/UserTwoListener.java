@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
 public class UserTwoListener implements ApplicationListener<ContentEvent> {
 	@Override
 	public void onApplicationEvent(ContentEvent contentEvent) {
-		System.out.println("[UserTwoListener]msg;" + contentEvent.getSource());
-		System.out.println("[UserTwoListener]Curt thread:" + Thread.currentThread().getName());
+		System.out.println("[User2Listener]msg;" + contentEvent.getSource());
+		System.out.println("[User2Listener]Curt thread:" + Thread.currentThread().getName());
 	}
 }
