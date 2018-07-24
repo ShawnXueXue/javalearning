@@ -1,6 +1,8 @@
 package shawn.keeplearning.domain;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @date 2018/6/26 10:36
@@ -37,5 +39,24 @@ public class User implements Serializable {
 
 	public void setNation(String nation) {
 		User.nation = nation;
+	}
+
+	private static boolean isValid(String input) {
+		List<String> stack = new ArrayList<String>();
+		for (int i = 0; i < input.length(); ++i) {
+			char c = input.charAt(i);
+			if ('(' == c || '[' == c || '{' == c) {
+				stack.add(String.valueOf(c));
+			} else if (')' == c || ']' == c || '}' == c) {
+				if (stack.size() <= 0)
+					return false;
+				stack.remove(stack.size() - 1);
+			}
+		}
+		return stack.isEmpty();
+	}
+
+	public static void main(String[] args) {
+		System.out.println(isValid("([a{[w]}]{})"));
 	}
 }
