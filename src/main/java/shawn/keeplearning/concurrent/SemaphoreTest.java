@@ -10,7 +10,7 @@ import java.util.concurrent.Semaphore;
 public class SemaphoreTest {
 
 	public static void main(String[] args) {
-		int nums = 50;
+		int nums=50;
 		Semaphore semaphore =  new Semaphore(10);
 		for (int i = 0; i < nums; ++i) {
 			int finali = i;
