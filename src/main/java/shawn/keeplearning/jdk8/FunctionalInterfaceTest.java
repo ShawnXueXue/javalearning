@@ -5,7 +5,7 @@ package shawn.keeplearning.jdk8;
  * Author: Shawn
  * Contact me: shawnglhf@gmail.com
  */
-@java.lang.FunctionalInterface
+@FunctionalInterface
 public interface FunctionalInterfaceTest {
 	void absFunc();
 	boolean equals(Object obj);

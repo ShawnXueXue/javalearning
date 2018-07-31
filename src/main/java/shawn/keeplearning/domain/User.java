@@ -57,6 +57,8 @@ public class User implements Serializable {
 	}
 
 	public static void main(String[] args) {
-		System.out.println(isValid("([a{[w]}]{})"));
+//		System.out.println(isValid("([a{[w]}]{})"));
+		String a = "a/bc/ccc";
+		System.out.println(a.substring(a.lastIndexOf('/') - 1, a.length()));
 	}
 }
